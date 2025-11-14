@@ -2,11 +2,11 @@
   <h1><%= @list.name %></h1>
   <p>Movies:</p>
   <% @list.bookmarks.each do |bookmark| %>
-    <div class="card-product">
+    <div class="card-product mb-3">
       <%= image_tag bookmark.movie.poster_url, width: 200 %>
       <div class="card-product-infos">
         <h2><%= bookmark.movie.title %></h2>
-        <p><%= bookmark.comment %> <%= link_to "--DELETE--", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Delete bookmark?" } %></p>
+        <p>"<%= bookmark.comment %>" <%= link_to "--DELETE--", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Delete bookmark?" } %></p>
       </div>
     </div>
   <% end %>
