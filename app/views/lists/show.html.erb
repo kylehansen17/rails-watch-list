@@ -4,7 +4,7 @@
   </div>
 </div>
 <div class="container mt-3 mb-3">
-  <p>Movies:</p>
+  <h3>Movies:</h3>
   <div class="row">
     <div class="col-9">
       <% @list.bookmarks.each do |bookmark| %>
@@ -21,11 +21,13 @@
       <% end %>
     </div>
     <div class="col-3">
-      <%= simple_form_for [@list, @bookmark] do |f| %>
-        <%= f.input :comment %>
-        <%= f.association :movie %>
-        <%= f.submit "Add Movie", class: 'btn btn-warning' %>
-      <% end %>
+      <div class="sticky-top border shadow p-3">
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+          <%= f.input :comment %>
+          <%= f.association :movie %>
+          <%= f.submit "Add Movie", class: 'btn btn-warning' %>
+        <% end %>
+      </div>
     </div>
   </div>
   <%= link_to "Back to home", lists_path, class: 'btn btn-warning text-decoration-none mt-3' %>
