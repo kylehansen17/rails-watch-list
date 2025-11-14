@@ -24,9 +24,9 @@
       <%= simple_form_for [@list, @bookmark] do |f| %>
         <%= f.input :comment %>
         <%= f.association :movie %>
-        <%= f.submit "Add Movie", class: 'btn btn-primary' %>
+        <%= f.submit "Add Movie", class: 'btn btn-warning' %>
       <% end %>
     </div>
   </div>
-  <%= link_to "Back to home", lists_path, class: 'btn btn-secondary text-decoration-none mt-3' %>
+  <%= link_to "Back to home", lists_path, class: 'btn btn-warning text-decoration-none mt-3' %>
 </div>
